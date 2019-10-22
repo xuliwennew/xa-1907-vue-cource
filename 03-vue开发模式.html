@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+
+<div id="app">
+  <div>
+      <h1>用户名</h1>
+      <p>说明</p>
+  </div>
+    <div>
+        <h1>用户名</h1>
+        <p>说明</p>
+    </div>
+</div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        class Model {
+            //实例属性
+            //实例方法
+        }
+
+        let user = [
+            {
+                name:"zs",
+                des:""
+            },
+            {
+                name:"lis",
+                des:""
+            }
+        ]
+         //心法
+        /**
+         * 1. 忘记DOM,以数据为中心，数据变化 vue数据驱动界面
+         * 2. 以面向对象的方式进行页面分析
+         *    MVVM
+         *    VIEW (component) 视图如何定义
+         *    VIEWMODEL (a model of view) (7个参数，8个hooks 4个核心指令)
+         *
+         *    Model(vue中没有提供model的功能) fetch axios
+         *
+         *    1.创建一个view dom psd
+         *    2.根据view来抽象view的模型 viewmodel （属性，方法） html
+         *    3.根据分析的页面数据结构，构建出模拟数据结构 需求文档+ dom html
+         *    vue project = m(ajax) + v(component) + viewmodel(data(页面的数据结构),methods(页面的逻辑))
+         *
+         *    vue viewmodel公式(7属性（el,data,methods,computed,template...） 8hooks 4个指令)
+         *    view component
+         *    model 数据层
+         */
+
+    })()
+</script>
+</body>
+</html>

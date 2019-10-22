@@ -9,5 +9,53 @@
 </head>
 <body>
 
+<div id="app">
+   <hello></hello>
+    <hello></hello>
+    <hello></hello>
+    <hello></hello><hello></hello>
+
+</div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+        //h1 input virutal dom
+
+        let h1 = {
+            type:"h1",
+            props:""
+        }
+        //virtual dom -> dom -> diff - >browser android ios
+
+        //组件化
+        let hello = {
+            template:`
+            <div>
+            <h1>{{msg}}</h1>
+    <input type="text" v-model="msg">
+</div>
+            `,
+            data(){
+                return {
+                    msg:"hello"
+                }
+            }
+        }
+
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{
+                hello
+            }
+        })
+
+
+    })()
+</script>
 </body>
 </html>
