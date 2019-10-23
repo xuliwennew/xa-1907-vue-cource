@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+
+<!--step1:view-->
+<div id="app"></div>
+<div id="app2"></div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        // class Programmer {
+        //    static tags =["diaosi"]
+        // }
+        //
+        // let zs = new Programmer()
+        // Programmer.tags
+
+
+        // class Vue {
+        //
+        //     //构造方法
+        //     constructor(options){
+        //        this.$el = options.el
+        //         this.$data = options.data;
+        //     }
+        //
+        //     //成员属性：实例属性
+        //     name = "vue"
+        //
+        //     static  config ={}
+        //
+        //     //静态的属性，类属性 作用上：定义一些全局的
+        //     static debug = false;
+        //
+        //     //静态的方法 设置一些全局的东西
+        //     static show(){
+        //
+        //     }
+        //
+        //     static component(){
+        //
+        //     }
+        //
+        //     //成员方法 : 实例属性
+        //     compiler(){
+        //
+        //     }
+        //
+        //
+        // }
+        //
+        // //step2: 根据view来创建一个viewmodel(双向绑定的控制器)
+        // // Vue
+        // let viewmodel = new Vue({
+        //     el:"#app",
+        //     data:{}
+        // })
+        // Vue.debug()
+        // Vue.show();
+        // viewmodel.name = "vue" // name setter getter
+        // viewmodel.compiler()
+        console.log(new Vue())
+
+        //view - >viewmodel
+        let vm1 = new Vue(); //包装好的一个viewmodel
+        let vm2 = new Vue(); //viewmodel:  双向绑定的机制
+
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body >
+
+<!--step1:view-->
+<div id="app">
+    {{1+1}}
+</div>
+<div id="app2">
+    {{1+1}}
+</div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        //SPA csr client side render framework
+        //SPA MPA
+
+        //viewmodel MVVM view->viewmodel
+        //vue简化Mvvm ,一个项目只用一个Viewmodel
+
+        //view : page , section
+
+        //创建一个vue风格的viewmodel
+        //new Vue({el:绑定view的位置})
+
+
+        //view - >viewmodel
+        let vm1 = new Vue({
+            // el:"#app" //el的位置只能在body内部
+        });  //创建一个空的viewmodel
+
+        vm1.$el = "#app" //readonly
+
+        console.log(vm1.$el == document.querySelector("#app"))
+
+        let vm2 = new Vue({
+            // el:"#app2"  //$el 指向view的位置
+        });
+        vm2.$el = "#app2" //readonly
+    })()
+</script>
+</body>
+</html>

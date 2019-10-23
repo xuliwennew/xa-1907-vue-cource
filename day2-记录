@@ -1,0 +1,29 @@
+Vue双向绑定实现的机制
+
+1.publish subscribe
+2.数据劫持:data: set get
+2.5.0
+Object.defineProperty("",{
+  set:
+  get:
+})
+
+es6 Proxy 2.6
+
+SPA
+swiper.js
+index.html#div2
+div1
+div2
+div3
+
+1. hashbang #div1 锚点
+2. html5 history api
+
+
+MPA
+多页面的项目
+page1 location.href
+
+在移动端
+http->tcp->req res -》 static dom -> img video

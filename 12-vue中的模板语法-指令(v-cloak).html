@@ -1,0 +1,47 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body >
+
+<div id="app" v-cloak>
+     <h1>{{title}}</h1>
+</div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        // {{}} vue模板
+
+        new Vue({
+            el:"#app",
+            data:{
+                title:"vue模板",
+                user:{
+                    name:"和三"
+                }
+            },
+            methods:{
+                show(){
+                    return "hello show"
+                }
+            }
+        })
+
+
+    })()
+</script>
+</body>
+</html>

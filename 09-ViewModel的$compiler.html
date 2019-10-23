@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body >
+
+<div id="app"></div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        //使用Vue.compile -> rener
+        let res = Vue.compile("<div><h1>{{title}}</h1></div>")
+
+
+       let vm= new Vue({
+            el:"#app",
+            data:{
+              title:"使用Vue.compile -> rener"
+            },
+            render:res.render,
+            staticRenderFns:res.staticRenderFns
+        })
+
+        let vnodeTree = vm.$createElement("div",{},"hello")
+        console.log(vnodeTree)
+
+
+    })()
+</script>
+</body>
+</html>

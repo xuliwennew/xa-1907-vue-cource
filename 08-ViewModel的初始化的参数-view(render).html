@@ -1,0 +1,69 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body >
+
+<div id="app"></div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        //js dom div
+        let divs = document.createElement("div")
+        console.log(divs)
+
+        //virutal dom 通过js对象来模拟一个dom
+        // <div><h1><span>
+        let vnode ={
+            type:"div", //root element
+            attrs:{
+                classname:""
+            },
+            children:[
+                {
+                    type:"div",
+                    attrs:{
+                        classname:""
+                    },
+                    children:[
+
+
+                    ]
+                }
+            ]
+        }
+
+
+       let vm= new Vue({
+            el:"#app",
+            template:'<h1>hello vue</h1>' , //template->vnode->render
+            render(createElement){ //vnode tree - > diff- compiler- out dom tree
+                //维护 div->h1/p->
+                return createElement("div",{},[
+                    createElement("h1",{},"hello vnode title"),
+                    createElement("div",{},[
+                        createElement("h3",{},[
+                            createElement("span",{},"---title")
+                        ]),
+                    ])
+                ])
+            }
+
+        })
+
+        let vnodeTree = vm.$createElement("div",{},"hello")
+        console.log(vnodeTree)
+
+
+    })()
+</script>
+</body>
+</html>
