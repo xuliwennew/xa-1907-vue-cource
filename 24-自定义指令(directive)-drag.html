@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+
+   <div id="app">
+        <div v-drag style="width:300px;height:500px;background-color: red"></div>
+       <div v-drag style="width:300px;height:500px;background-color: green"></div>
+       <div v-drag style="width:300px;height:500px;background-color: blue"></div>
+       <div v-drag style="width:300px;height:500px;background-color: yellow"></div>
+   </div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        Vue.directive("drag",function (el,binding) {
+            el.onmousedown = function (e) {
+
+                el.style.position = "absolute"
+                let sx = e.clientX - el.offsetLeft
+                let sy = e.clientY - el.offsetTop
+
+                document.onmousemove = function (e) {
+                    el.style.left = (e.clientX - sx) + "px"
+                    el.style.top = (e.clientY - sy) + "px"
+                }
+
+                el.onmouseup = function () {
+                    document.onmousemove =null;
+                    el.onmouseup = null
+                }
+            }
+        })
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            directives:{
+
+            }
+        })
+
+
+
+
+    })()
+</script>
+</body>
+</html>

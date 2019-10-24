@@ -15,12 +15,27 @@
 <body >
 
 <div id="app" v-cloak>
-    <h1>用户注册</h1>
-    用户名： <input v-model="userForm.username" type="text">
-    密码： <input v-model="userForm.pass" type="password">
+    <a @click="flag = true">新闻</a> <a @click="flag = false">电影</a>
     <hr>
-    <button @click="regUser">注册用户</button>
-    {{userForm}}
+   <div v-if="flag">
+       <h1>新闻</h1>
+   </div>
+    <div v-else>
+        <h1>电影</h1>
+    </div>
+    <hr>
+    您选择的课程是: <select v-model="cource">
+    <option value="vue">vue</option>
+    <option value="angular">angular</option>
+</select>
+    <ul>
+        <li v-if="cource=='vue'">vue</li>
+        <li v-else-if="cource =='angular'">angular</li>
+        <li v-else>react</li>
+    </ul>
+
+    <div v-if="false">show or hide</div>
+    <div v-show="false">show or hide</div>
 </div>
 
 
@@ -28,24 +43,13 @@
 <script>
     (function () {
 
-        // {{}} vue模板
-
         new Vue({
             el:"#app",
             data:{
-                 userForm:{
-                     username:"x",
-                     pass:""
-                 }
-            },
-            methods:{ //用来组织逻辑或者事件响应的方法
-                regUser( ){
-                  console.log(this.userForm)
-                }
+                flag:true,
+                cource:"vue"
             }
         })
-
-
 
 
     })()

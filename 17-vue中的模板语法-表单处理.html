@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+<div id="app">
+
+    <h1>用户注册</h1>
+    用户名: <input type="text" v-model="userForm.username">
+    <hr/>
+    密码: <input type="password" v-model="userForm.pass">
+    <hr/>
+    性别：<input type="radio" value="male" v-model="userForm.sex" name="sex">男 <input v-model="userForm.sex" type="radio" value="female" name="sex">女
+    <hr/>
+    爱好:<input type="checkbox" value="movie" v-model="userForm.hobby"> 看电影 <input type="checkbox" value="code" v-model="userForm.hobby"> 写代码
+    <hr>
+    地址：
+    <select v-model="userForm.sAddrs.p">
+        <option :value="p" v-for="p in addrs">{{p.province}}</option>
+    </select>
+    <select v-model="userForm.sAddrs.c">
+        <option :value="c" v-for="c in userForm.sAddrs.p.cities">{{c.city}}</option>
+    </select>
+    <select v-model="userForm.sAddrs.q">
+        <option :value="a" v-for="a in userForm.sAddrs.c.areas">{{a.area}}</option>
+    </select>
+    <hr>
+    介绍:
+    <textarea cols="100" rows="5" v-model="userForm.profile"></textarea>
+
+    <hr>
+    <button @click="reg">注册</button>
+    {{userForm}}
+</div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+        new Vue({
+            el:"#app",
+            methods:{
+              reg(){
+                  console.log(this.userForm)
+              }
+            },
+            data:{
+                addrs:[
+                    {
+                        province:"陕西省",
+                        cities:[
+                            {
+                                city:"西安",
+                                areas:[
+                                    {
+                                        area:"高新区"
+                                    },
+                                    {
+                                        area:"长安区"
+                                    }
+                                ]
+                            },
+                            {
+                                city:"咸阳",
+                                areas:[
+                                    {
+                                        area:"围城区"
+                                    },
+                                    {
+                                        area:"咸阳区"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        province:"甘肃省",
+                        cities:[
+                            {
+                                city:"兰州",
+                                areas:[
+                                    {
+                                        area:"兰州区1"
+                                    },
+                                    {
+                                        area:"兰州区2"
+                                    }
+                                ]
+                            },
+                            {
+                                city:"天水",
+                                areas:[
+                                    {
+                                        area:"天水区1"
+                                    },
+                                    {
+                                        area:"天水区2"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                 userForm:{
+                     username:"",
+                     pass:"",
+                     sex:"male",
+                     hobby:["movie"],
+                     sAddrs:{
+                         p:"",
+                         c:"",
+                         q:""
+                     },
+                     profile:""
+
+                 }
+            }
+        })
+    })()
+</script>
+</body>
+</html>
