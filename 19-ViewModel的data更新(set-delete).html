@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+<div id="app">
+
+    {{msg}}
+    <button @click="update">update</button>
+    <button @click="remove">remove</button>
+    <input type="text" v-model="txt"> <button @click="add">添加</button>
+    <ul>
+        <li v-for="(n,i) in cources">
+            {{n}}
+            <a @click="del(i)">x</a>
+        </li>
+    </ul>
+
+    <hr>
+    <h1>{{user.name}}</h1>
+    <h2>{{user.age}}</h2>
+    <button @click="updateName">修改名字</button>
+</div>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+      let vm= new Vue({
+            el:"#app",
+            data:{
+                txt:"",
+                msg:"hello vue",
+                cources:["react","vue","angular"],
+                user:{
+                    name:"zhangsan",
+                    age:20
+                }
+            },
+            methods:{
+                add(){
+                   this.cources.push(this.txt)
+                },
+                del(i){
+                   this.cources.splice(i,1)
+                },
+                update(){
+                    this.$set(this.cources,1,"vue 3")
+                },
+                remove(){
+                    this.$delete(this.cources,1)
+                },
+                updateName(){
+                    //更改页面，data的数据发生变化了 diff
+                    // this.user.name="张三"
+                    // this.$set(this.user,"name","张小三")
+                    // this.user.age = 20
+                    //this.$set(this.user,"age",20)
+                    this.$delete(this.user,"age")
+
+                }
+            }
+        })
+
+        vm.cources[0] = "react native"
+        console.log(vm.cources)
+        //vm.$forceUpdate()
+        //Vue.set vue.delete
+         Vue.set(vm.cources,0,"react native")
+    })()
+</script>
+</body>
+</html>
