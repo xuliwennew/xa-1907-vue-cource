@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+   <div id="app">
+
+        <hello></hello>
+
+        <world></world>
+
+        <hi></hi>
+
+        <my></my>
+
+
+   </div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        //局部组件（注册到new Vue({components})），全局组件
+
+        //组件创建 vue style
+        let hello ={
+            template:"<h1>hello world</h1>",
+            render(h){
+                return h("h1",{},"hello component")
+            }
+        }
+
+        //全局组件
+
+        Vue.component("world",{
+            template:"<h1>hi world</h1>",
+        })
+
+        //3.
+        let hi =Vue.extend({
+            template:"<h1>hi vue!</h1>",
+        })
+
+        //4.
+
+        //5. angular @component
+
+        //6 react jsx
+
+        //7 单页面组件 模块化写法 webpack es6
+        // life is short webpack is hard
+
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{ //注册当前vm中的组件
+                hello,
+                hi,
+                my:{
+                    template:"<h1>inner component</h1>",
+                    components:{
+                        me:{
+                            template:"<h1>me</h1>"
+                        }
+                    }
+                }
+            }
+        })
+    })()
+</script>
+</body>
+</html>

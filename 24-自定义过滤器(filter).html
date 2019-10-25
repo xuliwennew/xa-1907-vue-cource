@@ -10,7 +10,11 @@
 <body>
    <div id="app">
 
-       {{msg}}
+       <div></div>
+       <login></login>
+
+       {{  msg | formatMsg  }}
+       <!--{{formatMsg}}-->
 
    </div>
 
@@ -21,6 +25,16 @@
             el:"#app",
             data:{
                 msg:"hello vue"
+            },
+            computed:{
+                formatMsg(){
+                    return "xa"+ this.msg+"1907"
+                }
+            },
+            filters:{ //在页面定义直接使用的方式
+                formatMsg(v){
+                    return "xa"+ v +" 1907"
+                }
             }
         })
     })()

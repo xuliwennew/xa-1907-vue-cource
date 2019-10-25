@@ -1,0 +1,31 @@
+
+
+gulp 相同类型文件进行处理
+js -> concat - >minify
+a.js
+b.js - jquery.min.js
+
+css js image icon font ttf wof template html
+
+
+webpack = web + pack
+
+打包 : .exe .msi .so .tar .jar .dll
+mongodb.msi - > mongdb/bin ->
+
+browser
+
+html  browser
+
+webpack
+ 1.实现多资源文件的统一打包 css+js+image
+ 2.模块化统一 nodejs commonjs browser cmd umd
+   commonjs es6 module
+   webpack - > pack - > front / back
+
+ parcle rollup
+
+
+
+
+

@@ -9,62 +9,62 @@
     <link href="bower_components/swiper/package/css/swiper.css" rel="stylesheet">
     <style>
         .swiper-container {
-            width:100%;
-            height:300px;
+            width: 100%;
+            height: 300px;
         }
 
         .box1 {
-            width:100%;
-            height:300px;
+            width: 100%;
+            height: 300px;
             background-color: red;
         }
 
         .box2 {
-            width:100%;
-            height:300px;
+            width: 100%;
+            height: 300px;
             background-color: yellow;
         }
 
         .box3 {
-            width:100%;
-            height:300px;
+            width: 100%;
+            height: 300px;
             background-color: blue;
         }
     </style>
 </head>
 <body>
-   <div id="app">
+<div id="app">
 
-       <div class="swiper-container">
-           <div class="swiper-wrapper">
-               <div class="swiper-slide box1"></div>
-               <div class="swiper-slide box2"></div>
-               <div class="swiper-slide box3"></div>
-           </div>
-           <div class="swiper-pagination"></div>
-       </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box1"></div>
+            <div class="swiper-slide box2"></div>
+            <div class="swiper-slide box3"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
 
-   </div>
+</div>
 
-   <script src="bower_components/swiper/package/js/swiper.js"></script>
+<script src="bower_components/swiper/package/js/swiper.js"></script>
 <script src="bower_components/vue/dist/vue.js"></script>
 <script>
     (function () {
         new Vue({
-            el:"#app",
-            data:{
-                msg:"hello vue"
+            el: "#app",
+            data: {
+                msg: "hello vue"
             },
-            mounted(){
-               this._initSwiper()
+            mounted() {
+                this._initSwiper()
             },
-            methods:{
-                _initSwiper(){
-                    new Swiper(".swiper-container",{
-                        direction:"vertical",
-                        effect:"flip",
-                        pagination:{
-                            el:".swiper-pagination"
+            methods: {
+                _initSwiper() {
+                    new Swiper(".swiper-container", {
+                        direction: "vertical",
+                        effect: "flip",
+                        pagination: {
+                            el: ".swiper-pagination"
                         }
 
                     })
