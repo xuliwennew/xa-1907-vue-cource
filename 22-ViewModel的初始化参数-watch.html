@@ -1,4 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+<div id="app">
+   <!---->
+    <h1>{{msg}}</h1>
+    <!--<input type="text" v-model="msg" />-->
+    <h1>{{num}}</h1>
+    <button @click="update">+</button>
+    <hr>
+    <input type="text" v-model="user.name">
+    <input type="text" v-model="user.age">
+    {{user}}
+</div>
 
-
-webpack
-component
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+        new Vue({
+            el:"#app",
+            data:{
+                num:0,
+                msg:"hello vue",
+                user:{
+                    name:"",
+                    age:10
+                }
+                //msg -> watch(omsg,omsg)
+                // omsg nmsg ==
+                //data change value view render diff
+                //update 减少dom -
+            },
+            watch:{
+                msg:function (n,o) {
+                    //
+                    console.log(n,o)
+                },
+                num(n,o){
+                    console.log(n,o)
+                    this.msg = this.msg + n;
+                },
+                user:{
+                    // handler deep
+                    handler:function(n,o){
+                        console.log(n.age,o.age)
+                    },
+                    deep:true
+                }
+            },
+            methods:{
+                update(){
+                   this.num++
+                }
+            }
+        })
+    })()
+</script>
+</body>
+</html>
