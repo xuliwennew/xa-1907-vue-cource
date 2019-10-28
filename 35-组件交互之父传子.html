@@ -5,9 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Title</title>
+    <title>1907-vue2x</title>
 </head>
 <body>
+<div id="app">
 
+  <father></father>
+
+</div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+        let grandson = {
+            template:"<h3>子子组件：{{title}}</h3>",
+            props:["title"]
+        }
+
+        let son = {
+            template:"<div><h2>子组件</h2><grandson :title='title'></grandson></div>",
+            props:["title"],
+            components:{
+                grandson
+            }
+        }
+
+        let father = {
+            data(){
+              return {
+                  title:"父传子的标题！！！"
+              }
+            },
+            template:"<div><h1>父组件</h1><hr><son :title='title'></son></div>",
+            components:{
+                son
+            }
+        }
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{
+                father
+            }
+        })
+    })()
+</script>
 </body>
 </html>

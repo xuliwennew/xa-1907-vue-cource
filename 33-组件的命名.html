@@ -10,6 +10,7 @@
 <body>
    <div id="app">
 
+      <my-header-body></my-header-body>
 
 
    </div>
@@ -18,10 +19,28 @@
 <script src="bower_components/vue/dist/vue.js"></script>
 <script>
     (function () {
+
+        //组件的命令问题
+        // js 变量 标签命名
+        // cemaral case pascal case
+        // 标签名的命名 kebab case 串串式
+        // single page component
+
+        //css js html
+
+
+        let myHeaderBody = {
+            template:"<h1>header component</h1>"
+        }
+
         new Vue({
             el:"#app",
             data:{
                 msg:"hello vue"
+            },
+            components:{
+                myHeaderBody
+                // "myHeaderBody":Header
             }
         })
     })()

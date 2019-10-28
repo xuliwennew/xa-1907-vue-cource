@@ -5,9 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Title</title>
+    <title>1907-vue2x</title>
 </head>
 <body>
+<div id="app">
 
+   <news-list></news-list>
+
+</div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        //木偶 无状态的组件: 根据父组件的数据来显示
+        let NewsItem = {
+            template:"<li><a>{{title}}</a> <a style='color:red' @click='delData(idx)'>x</a> </li>",
+            props:["title","idx"],
+            methods:{
+                delData(i){
+                   this.$emit("xx",i) // 触发  父组件中的事件监听 xx i
+             }
+            }
+        }
+
+        //智能组件: 有状态的组件 data,logic
+        let NewsList = {
+            data(){
+              return {
+                  list:[
+                      "16天16封贺信！习近平提到最多的是这个词",
+                      "推动全民道德素质和社会文明程度达到新高度"
+                  ]
+              }
+            },// this.$on("xx",del)
+            template:"<ul><news-item @xx='del' :title='n' :idx='i' v-for='(n,i) in list'></news-item></ul>",
+            components:{
+                NewsItem
+            },
+            methods:{
+                del(i){
+                   this.list.splice(i,1)
+                }
+            }
+        }
+
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{
+                NewsList
+            }
+        })
+    })()
+</script>
 </body>
 </html>

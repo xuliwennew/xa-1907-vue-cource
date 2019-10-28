@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>动态props传递</title>
+</head>
+<body>
+   <div id="app">
+
+        <hello :num="1" n="0"></hello>
+       <hr/>
+        <user :key="index" :name="u.name" :age="u.age" v-for="(u,index) in userList"></user>
+
+   </div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        // function sum(a,b){
+        //     return a+b
+        // }
+        //
+        // function withdraw(acount,num){
+        //     return acount.num-num
+        // }
+
+        //props readonly
+        //组件的设计应该是一个pure function props在组件内部不可以更新
+        let hello = {
+            template:"<h1>{{num | count}} {{n}}</h1>",
+            props:{
+                num:{
+                    type:Number,
+                    default:0,
+                    required:true,
+                    validator:function (v) {
+                        return v >0
+                    }
+                },
+                n:Number
+            },
+            filters:{
+                count(v){
+                    return v+100
+                }
+            }
+        }
+
+        //pure function ->
+        //console.log(hello.props.n = 2)
+        hello.props.n = {
+            type:String,
+            default:20
+        }
+
+        let user = {
+            template:"<div><h1>{{name}}</h1><h2>{{age}}</h2></div>",
+            props:["name","age"]
+        }
+
+        new Vue({
+            el:"#app",
+            components:{
+                hello,
+                user
+            },
+            data:{
+                n:0,
+                userList:[
+                    {name:"张三",age:20},
+                    {name:"李四",age:23}
+                ]
+            }
+        })
+
+    })()
+</script>
+</body>
+</html>

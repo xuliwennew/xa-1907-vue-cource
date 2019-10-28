@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Title</title>
+    <title>1907-vue2x</title>
 </head>
 <body>
+<div id="app">
 
+
+
+    <hello>
+         <header slot="h"> <h1>你好</h1> </header>
+         <p slot="b">hello</p>
+         <footer>底部信息</footer>
+    </hello>
+
+</div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        let three = {
+            template:"<h1>three</h1>"
+        }
+
+
+        let two = {
+            template:"<div><h1>two</h1><three></three></div>",
+            components:{
+                three //注册子组件
+            }
+        }
+
+        //父子组件关系的问题
+        let one = {
+            template:"<div><h1>one</h1><two></two></div>",
+            components:{
+                two
+            }
+        }
+
+        let hello = {
+            template:"<div><slot name='h'></slot><h2>hello内部信息</h2><slot name='b'></slot><slot></slot></div>"
+        }
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{
+                one,
+                hello
+            }
+        })
+    })()
+</script>
 </body>
 </html>
