@@ -1,5 +1,5 @@
 <template>
-    <h1 class="cc">single component</h1>
+    <h1 class="cc">single component-very good</h1>
 </template>
 
 

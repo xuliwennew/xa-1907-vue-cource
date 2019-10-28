@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+   <div id="app">
+       <hello></hello>
+       <hello></hello>
+       <hello></hello>
+       <hello></hello>
+   </div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+
+
+        /*
+           核心参数
+         * name组件名称
+         * data: 数据结构 data:functions
+         * methods: 逻辑
+         * computed
+         * template
+         * render
+         * watch
+         *
+         * 组件的内置
+         * props
+         *
+         */
+        let hello ={
+            name:"hello",
+            template:"<div><h1 @click='show'>{{formatMsg}}</h1><input type='text' v-model='msg'></div>",
+            data(){
+               return {
+                   msg:"hello world component"
+               }
+            },
+            methods:{
+               show(){
+                   alert(this.msg)
+               }
+            },
+            computed:{
+                formatMsg(){
+                    return this.msg + "----"
+                }
+            },
+            watch:{
+                msg(n,o){
+                    console.log(n,o)
+                }
+            }
+        }
+
+
+
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{
+                hello,
+            }
+        })
+    })()
+</script>
+</body>
+</html>

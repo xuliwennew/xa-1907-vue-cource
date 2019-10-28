@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+</head>
+<body>
+   <div id="app">
+
+       <ulogin istyle="color:red" title="用户登录" btitle="用户登录" :login-service="userLogin"></ulogin>
+       <hr>
+       <alogin istyle="color:yellow" title="管理员登录" btitle="登录" :login-service="adminLogin"></alogin>
+
+   </div>
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        //login组件可以在不同的背景使用 user admin
+        let login ={
+            template:`
+               <div :style="istyle">
+                  <h1>{{title}}</h1>
+                  <div>
+                  用户名： <input type="text">
+                  <hr>
+                  密码： <input type="password">
+                  <hr>
+                  <button @click="loginService">{{btitle}}</button>
+                 </div>
+               </div>
+            `,
+            props:{
+                title:"",
+                btitle:"",
+                loginService:"",
+                istyle:""
+            }
+        }
+
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"hello vue"
+            },
+            components:{
+                "ulogin":login,
+                "alogin":login
+            },
+            methods:{
+                userLogin(name,pass){
+                    console.log("用户登录成功！:"+name)
+                },
+                adminLogin(name,pass){
+                    console.log("管理员登录成功！:"+name)
+                }
+            }
+        })
+    })()
+</script>
+</body>
+</html>
