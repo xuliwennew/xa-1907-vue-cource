@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ee956ee-526b-47cb-8f5d-848e68073f1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/37-vue中自定义事件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/39-动态组件绑定(is).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/42-vue过渡与动画（1）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/42-vue过渡与动画（2）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/42-vue过渡与动画（3）.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/42vue整合swiper.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/animate.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/38-组件生命周期方法.html" beforeDir="false" afterPath="$PROJECT_DIR$/38-组件生命周期方法.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/39-组件的缓存方式(keepalive).html" beforeDir="false" afterPath="$PROJECT_DIR$/39-组件的缓存方式(keepalive).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/40-跨组件之间的数据传递(事件总线 EventBus).html" beforeDir="false" afterPath="$PROJECT_DIR$/40-跨组件之间的数据传递(事件总线 EventBus).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/41-组件的内置对象-refs.html" beforeDir="false" afterPath="$PROJECT_DIR$/41-组件的内置对象-refs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/42-vue过渡与动画.html" beforeDir="false" />
-    </list>
+    <list default="true" id="8ee956ee-526b-47cb-8f5d-848e68073f1f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -116,12 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/42-vue过渡与动画（3）.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="16" column="89" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -339,18 +320,18 @@
       <workItem from="1571964426268" duration="20957000" />
       <workItem from="1572224926686" duration="22295000" />
       <workItem from="1572278880782" duration="14306000" />
-      <workItem from="1572327894469" duration="1895000" />
+      <workItem from="1572327894469" duration="2662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118545000" />
+    <option name="totallyTimeSpent" value="119312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.33423325" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33423325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -737,12 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/42-vue过渡与动画（3）.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="16" column="89" selection-start-line="16" selection-start-column="89" selection-end-line="16" selection-end-column="89" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>
