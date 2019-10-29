@@ -9,12 +9,17 @@
 </head>
 <body>
 <div id="app">
-    <div ref="xx">aaaaaaaa</div>
-    <div ref="yy">aaaaaaaabbbbbbb</div>
-    <button @click="changeColor">change color</button>
+
+    <a @click="flag='one'">第一步：</a>｜<a @click="flag= 'two'">第二步：</a>
     <hr>
-    <one ref="o"></one>
-    <button @click="update">+</button>
+    <!--<keep-alive>-->
+        <!--<one v-if="flag"></one>-->
+        <!--<two v-else></two>-->
+    <!--</keep-alive>-->
+    <keep-alive>
+        <div :is="flag"></div>
+    </keep-alive>
+
 </div>
 
 
@@ -24,33 +29,30 @@
 
         let one = {
             data(){
+              return {
+                  name:""
+              }
+            },
+            template:"<div>用户名：<input v-model='name' type='text' />{{name}}</div>"
+        }
+
+        let two = {
+            data(){
                 return {
-                    num:0
+                    pass:""
                 }
             },
-            methods:{
-                update(){
-                    this.num++
-                }
-            },
-            template:"<div><h1>{{num}}</h1></div>"
+            template:"<div>密码：<input v-model='pass' type='text' />{{pass}}</div>"
         }
 
         new Vue({
             el:"#app",
             data:{
-                msg:"hello vue"
-            },
-            methods:{
-                changeColor(){
-                    console.log(this.$refs.xx.style.backgroundColor="red")
-                },
-                update(){
-                   this.$refs.o.num++
-                }
+                flag:"one"
             },
             components:{
-                one
+                one,
+                two
             }
         })
     })()

@@ -6,16 +6,20 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <title>1907-vue2x</title>
+    <link rel="stylesheet" href="assets/animate.css">
 </head>
 <body>
 <div id="app">
 
-    <a @click="flag=true">第一步：</a>｜<a @click="flag= false">第二步：</a>
+    <a @click="flag = 'one'">B</a> ||<a @click="flag = 'two'">A</a>
     <hr>
-    <keep-alive>
-        <one v-if="flag"></one>
-        <two v-else></two>
-    </keep-alive>
+
+    <transition enter-active-class="animated bounceIn" leave-active-class="animated flash" mode="out-in">
+        <div :is="flag">
+            <one></one>
+        </div>
+    </transition>
+
 
 </div>
 
@@ -25,27 +29,20 @@
     (function () {
 
         let one = {
-            data(){
-              return {
-                  name:""
-              }
-            },
-            template:"<div>用户名：<input v-model='name' type='text' />{{name}}</div>"
+            template:"<div style='width:300px;height:500px;background-color: red'></div>",
+
         }
 
         let two = {
-            data(){
-                return {
-                    pass:""
-                }
-            },
-            template:"<div>密码：<input v-model='pass' type='text' />{{pass}}</div>"
+            template:"<div style='width:300px;height:500px;background-color: green'></div>",
+
         }
 
         new Vue({
             el:"#app",
             data:{
-                flag:true
+                msg:"hello vue",
+                flag:"one"
             },
             components:{
                 one,

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>1907-vue2x</title>
+    <link href="bower_components/swiper/package/css/swiper.css" rel="stylesheet">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 300px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .box3 {
+            width: 100%;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+     <vue-swiper :options="s1"></vue-swiper>
+     <vue-swiper :options="s2"></vue-swiper>
+     <vue-swiper :options="s2"></vue-swiper>
+
+
+</div>
+
+<script src="bower_components/swiper/package/js/swiper.js"></script>
+<script src="bower_components/vue/dist/vue.js"></script>
+<script>
+    (function () {
+
+        let VueSwiper = {
+            template:`
+             <div ref="s" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide box1"></div>
+                    <div class="swiper-slide box2"></div>
+                    <div class="swiper-slide box3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+             </div>
+            `,
+            mounted() {
+                this._initSwiper()
+            },
+            methods: {
+                _initSwiper() {
+                    new Swiper(this.$refs.s, this.$props.options)
+                }
+            },
+            props:["options"]
+
+        }
+
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "hello vue",
+                s1:{
+                    direction: "vertical",
+                    effect: "flip",
+                    pagination: {
+                        el: ".swiper-pagination"
+                    }
+
+                },
+                s2:{
+                    effect: "cube",
+                    pagination: {
+                        el: ".swiper-pagination"
+                    }
+
+                }
+            },
+            components:{
+                VueSwiper
+            }
+        })
+    })()
+</script>
+</body>
+</html>
