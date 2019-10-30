@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ee956ee-526b-47cb-8f5d-848e68073f1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/apis/cartApi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/basic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/carts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/computer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/images/icon-kin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/images/icon_radio3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/images/icon_radio4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/images/s_goods_pitch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/assets/mcbook.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/commons/Config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/components/carts/footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/components/carts/header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/components/carts/products/item.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/components/carts/products/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/components/carts/shop.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-carts-demo/views/carts.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/carts.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/carts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="8ee956ee-526b-47cb-8f5d-848e68073f1f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -108,83 +84,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/components/carts/shop.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/apis/cartApi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/commons/Config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/views/carts.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-              <folding>
-                <element signature="e#180#202#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/components/carts/footer.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="24" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/components/carts/products/list.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue-carts-demo/components/carts/products/item.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="5" column="54" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -409,18 +309,17 @@
       <workItem from="1572224926686" duration="22295000" />
       <workItem from="1572278880782" duration="14306000" />
       <workItem from="1572327894469" duration="3483000" />
-      <workItem from="1572361376681" duration="20441000" />
+      <workItem from="1572361376681" duration="20805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140574000" />
+    <option name="totallyTimeSpent" value="140938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26295897" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26295897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -432,7 +331,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.56344587" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.56344587" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -828,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue-carts-demo/views/carts.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        <state relative-caret-position="177">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
           <folding>
             <element signature="e#180#202#0" expanded="true" />
           </folding>
