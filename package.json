@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev":"webpack -w --progress",
-    "start":"npm run dev"
+    "dev": "webpack -w --progress",
+    "start": "npm run dev"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,9 @@
   },
   "devDependencies": {
     "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
     "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
     "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2",

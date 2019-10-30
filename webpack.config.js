@@ -4,11 +4,11 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin")
 module.exports = {
     mode:"development",
     entry:{
-        app:"./vue-demo/main.js"
+        app:"./vue-carts-demo/main.js"
     },
     output:{
         filename:"app.bundle.js",
-        path:path.resolve(__dirname,"vue-demo")
+        path:path.resolve(__dirname,"vue-carts-demo")
     },
     resolve: {
         extensions: [".js",".css",".vue"]
@@ -22,6 +22,10 @@ module.exports = {
             {
                 test:/\.vue$/,
                 loaders:"vue-loader"
+            },
+            {
+                test:/\.(png|jpg|gif)$/,
+                loaders:"url-loader"
             }
         ]
     },
