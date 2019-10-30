@@ -1,0 +1,64 @@
+{
+  "totalMoney":0,
+  "checked":true,
+  "shops":[
+    {
+       "shopName":"苹果专卖店",
+       "degree":1,
+       "totalShopMoney":0,
+       "checked":true,
+       "products":[
+         {
+           "title":"1-Apple MacBook Pro 13.3英寸笔记本电脑 银色(Core i5 处理器/8GB内存/128GB SSD闪存/Retina屏 MF839CH/A)",
+           "pic":"assets/computer.jpg",
+           "weight":"3.3kg",
+           "color":"标配版",
+           "ver":"13.3英寸",
+           "price":3000,
+           "qal":1,
+           "checked":true
+         },
+         {
+           "title":"2-Apple MacBook Pro 13.3英寸笔记本电脑 银色(Core i5 处理器/8GB内存/128GB SSD闪存/Retina屏 MF839CH/A)",
+           "pic":"assets/computer.jpg",
+           "weight":"13.3kg",
+           "color":"1标配版",
+           "ver":"113.3英寸",
+           "price":13000,
+           "qal":1,
+           "checked":true
+         }
+       ]
+
+    },
+    {
+      "shopName":"华为专卖店",
+      "degree":1,
+      "totalShopMoney":0,
+      "checked":true,
+      "products":[
+        {
+          "title":"1-huawei MacBook Pro 13.3英寸笔记本电脑 银色(Core i5 处理器/8GB内存/128GB SSD闪存/Retina屏 MF839CH/A)",
+          "pic":"assets/computer.jpg",
+          "weight":"6.3kg",
+          "color":"标配版",
+          "ver":"18.3英寸",
+          "price":8000,
+          "qal":1,
+          "checked":true
+        },
+        {
+          "title":"2-huawei MacBook Pro 13.3英寸笔记本电脑 银色(Core i5 处理器/8GB内存/128GB SSD闪存/Retina屏 MF839CH/A)",
+          "pic":"assets/computer.jpg",
+          "weight":"90.3kg",
+          "color":"1标配版",
+          "ver":"1138.3英寸",
+          "price":9000,
+          "qal":1,
+          "checked":true
+        }
+      ]
+
+    }
+  ]
+}

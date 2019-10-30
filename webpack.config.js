@@ -4,11 +4,11 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin")
 module.exports = {
     mode:"development",
     entry:{
-        app:"./single-components/main.js"
+        app:"./vue-demo/main.js"
     },
     output:{
         filename:"app.bundle.js",
-        path:path.resolve(__dirname,"single-components")
+        path:path.resolve(__dirname,"vue-demo")
     },
     resolve: {
         extensions: [".js",".css",".vue"]

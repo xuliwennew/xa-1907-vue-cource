@@ -9,5 +9,57 @@
 </head>
 <body>
 
+
+<script src="bower_components/axios/dist/axios.js"></script>
+<script>
+
+    (function () {
+
+        // stream buffer res.json
+        fetch("http://localhost:3001/shops/info").then(res=>{
+            //res stream promise
+            res.json().then(data=>{
+                console.log(data)
+            })
+        })
+
+        fetch("http://localhost:3001/shops/test",{
+            method:"POST",
+            headers:{
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body:"a=1&b=2"
+        }).then(res=>{
+            //res stream promise
+            res.json().then(data=>{
+                console.log(data)
+            })
+        })
+
+
+        axios.get("http://localhost:3001/shops/info")
+            .then(res=>{
+                console.log(res.data)
+            })
+
+        axios({
+            baseURL:"http://localhost:3001",
+            url:"/shops/test",
+            method:"POST",
+            data:{ //body
+                a:1,
+                b:2
+            }
+        }).then(res=>{
+            console.log(res.data)
+        })
+
+
+
+
+
+    })()
+
+</script>
 </body>
 </html>
