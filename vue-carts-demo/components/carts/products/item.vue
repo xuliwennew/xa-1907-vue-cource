@@ -3,6 +3,7 @@
         <div class="shop-info">
             <input type="checkbox"
                    v-model="data.checked"
+                   @change="pSelected(sid)"
                    class="check goods-check goodsCheck"/>
             <div class="shop-info-img">
                 <a href="#">
@@ -23,9 +24,9 @@
                         ￥<b class="price">{{data.price}}</b>
                     </div>
                     <div class="shop-arithmetic">
-                        <a class="minus">-</a>
+                        <a class="minus" @click.prevent="addNum(sid,pid,'minus')">-</a>
                         <span class="num">{{data.num}}</span>
-                        <a class="plus">+</a>
+                        <a class="plus" @click.prevent="addNum(sid,pid,'add')">+</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +37,15 @@
 <script>
     export default {
         name: "item",
-        props:["data","pid","sid"]
+        props:["data","pid","sid"],
+        methods:{
+            pSelected(sid){
+                this.$emit("pAll",sid)
+            },
+            addNum(sid,pid,flag){
+                this.$bus.$emit("num",sid,pid,flag)
+            }
+        }
     }
 </script>
 

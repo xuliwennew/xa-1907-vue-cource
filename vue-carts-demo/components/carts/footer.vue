@@ -21,7 +21,7 @@
         props:["data"],
         methods:{
             selectAll(){
-                this.$emit("sAll")
+                this.$emit("cAll")
             }
         },
         filters:{
