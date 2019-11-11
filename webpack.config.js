@@ -4,11 +4,11 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin")
 module.exports = {
     mode:"development",
     entry:{
-        app:"./router-demo/main.js"
+        app:"./vue3x-api/main.js"
     },
     output:{
-        filename:"app.bundle.js",
-        path:path.resolve(__dirname,"router-demo")
+        filename:"app2.bundle.js",
+        path:path.resolve(__dirname,"vue3x-api")
     },
     resolve: {
         extensions: [".js",".css",".vue"]
